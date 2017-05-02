@@ -8,6 +8,7 @@ import {Menu, Button, Icon} from 'antd';
 import 'antd/dist/antd.css';
 import PCIndex from './componets/pc_index';
 import PCNewsDetails from './componets/pc_details';
+import PCUserCenter from './componets/pc_user_center';
 import MobileIndex from './componets/mobile_index';
 import MediaQuery from 'react-responsive';
 
@@ -36,6 +37,7 @@ export default class Root extends React.Component {
                     <Router history={hashHistory}>
                         <Route path="/" component={PCIndex}/>
                         <Route path="/details/:uniquekey" component={PCNewsDetails}/>
+                        <Route path="/usercenter" component={PCUserCenter} />
                     </Router>
                 </MediaQuery>
                 <MediaQuery query="(max-device-width: 1224px)">

@@ -6,6 +6,7 @@ import {Row, Col, Menu, Icon, Tabs, message, Form, Input, Button, CheckBox, Moda
 import {Link} from 'react-router';
 import PCNewsBlock from './pc_news_block';
 import PCNewsImageBlock from './pc_news_img';
+import PCProducts from './pc_product';
 
 /*
 * 包含新闻文字区+图片区
@@ -31,9 +32,9 @@ export default class PCNewsContainer extends React.Component {
         return (
             <div>
                 <Row>
-                    <Col span={2}>
+                    <Col span={1}>
                     </Col>
-                    <Col span={20} className="container">
+                    <Col span={22} className="container">
                         <div className="leftContainer">
                             <div className="carousel">
                                 <Carousel {...settings}>
@@ -56,12 +57,17 @@ export default class PCNewsContainer extends React.Component {
                                 <PCNewsBlock count={20} type="yule" width="100%" bordered="false"/>
                             </TabPane>
                         </Tabs>
+                        <Tabs className="tabs_product">
+                            <TabPane tab="热搜排行榜" key="1">
+                                <PCProducts />
+                            </TabPane>
+                        </Tabs>
                         <div>
                             <PCNewsImageBlock count="16" type={"yule"} cardTitle="娱乐头条" width="100%" imageWidth="112px"/>
                             <PCNewsImageBlock count="16" type={"junshi"} cardTitle="军事头条" width="100%" imageWidth="112px"/>
                         </div>
                     </Col>
-                    <Col span={2}>
+                    <Col span={1}>
                     </Col>
                 </Row>
             </div>
